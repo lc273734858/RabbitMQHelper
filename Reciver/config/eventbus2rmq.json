@@ -1,0 +1,18 @@
+﻿{
+  "RabbitMQAdress": "192.168.130.64", 
+  "UserName": "Admin", 
+  "PassWord": "123456",
+  "Events": [
+    {
+      "EventName": "CustomerServiceCenter.ChatRecord.AddChatRecord",
+      "ExchangeType": "fanout"
+    }
+  ],
+  "Consumers": [
+    {
+      "EventName": "CustomerServiceCenter.ChatRecord.AddChatRecord",
+      "ConsumerName": "CustomerServiceCenter.ChatRecord.AddChatRecord.QueueChatCache",
+      "EventProcesser": "ReciverTestProcesser.Processer,ReciverTestProcesser"
+    }
+  ]
+}

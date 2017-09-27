@@ -1,0 +1,24 @@
+﻿{
+  "RabbitMQAdress": "192.168.130.64", //测试环境地址
+  "UserName": "Admin", //测试环境，线上用户名，向平台架构部/运维申请
+  "PassWord": "123456",
+  // "Port": "",
+  // "AutomaticRecoveryEnabled": false,
+  //"VirtualHost": "test",
+  "Events": [
+    {
+      "EventName": "事件名称",//申请线上账户时，告知事件名称，分配权限
+      "ExchangeType": "fanout"//当前默认只支持发布/订阅模式
+    }
+  ],
+  "Consumers": [
+    {
+      "EventName": "事件名称",
+      "ConsumerName": "事件队列名称，命名请使用EventName.QueueName的格式",
+      "EventProcesser": "处理接收消息的类，需要继承EventBus2RMQ.IResumer"
+      //"Durable": true,
+      //"Exclusive": false,
+      //"AutoDelete": false
+    }
+  ]
+}

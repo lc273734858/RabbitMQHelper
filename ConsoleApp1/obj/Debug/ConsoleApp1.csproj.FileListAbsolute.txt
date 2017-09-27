@@ -1,0 +1,14 @@
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\config\eventbus2rmq.json
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\EventBus2RMQ.dll
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\RabbitMQ.Client.dll
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\EventBus2RMQ.pdb
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\EventBus2RMQ.dll.config
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\bin\Debug\RabbitMQ.Client.xml
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\workfolder\projects\RabbitMQHelper\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

@@ -1,0 +1,14 @@
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\config\eventbus2rmq.json
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\WebApplication2.dll.config
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\WebApplication2.dll
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\WebApplication2.pdb
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\EventBus2RMQ.dll
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\RabbitMQ.Client.dll
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\Newtonsoft.Json.dll
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\EventBus2RMQ.pdb
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\EventBus2RMQ.xml
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\bin\RabbitMQ.Client.xml
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\obj\Release\WebApplication2.csprojResolveAssemblyReference.cache
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\obj\Release\WebApplication2.csproj.CoreCompileInputs.cache
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\obj\Release\WebApplication2.dll
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\obj\Release\WebApplication2.pdb

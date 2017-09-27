@@ -1,0 +1,2 @@
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+F:\workfolder\projects\RabbitMQHelper\WebApplication2\obj\Debug\WebApplication2.csproj.CoreCompileInputs.cache

@@ -1,0 +1,13 @@
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\ReciverTestProcesser.dll.config
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\ReciverTestProcesser.dll
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\ReciverTestProcesser.pdb
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\EventBus2RMQ.dll
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\Newtonsoft.Json.dll
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\RabbitMQ.Client.dll
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\EventBus2RMQ.pdb
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\EventBus2RMQ.dll.config
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\bin\Debug\RabbitMQ.Client.xml
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\obj\Debug\ReciverTestProcesser.csprojResolveAssemblyReference.cache
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\obj\Debug\ReciverTestProcesser.csproj.CoreCompileInputs.cache
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\obj\Debug\ReciverTestProcesser.dll
+F:\workfolder\projects\RabbitMQHelper\ReciverTestProcesser\obj\Debug\ReciverTestProcesser.pdb
