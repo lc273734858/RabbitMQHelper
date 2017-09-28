@@ -32,36 +32,7 @@ namespace EventBus2RMQ
                 BeginConsumer(item);
             }
         }
-        /// <summary>
-        /// 订阅事件
-        /// </summary>
-        /// <param name="eventName">事件名称</param>
-        /// <param name="consumerName">消费者名称</param>
-        /// <param name="routekey">路由</param>
-        /// <param name="durable">持久</param>
-        /// <param name="exclusive"></param>
-        /// <param name="autoDelete">自动删除</param>
-        public static void Subscription(string eventName, string consumerName, string routekey = "", bool durable = true, bool exclusive = false, bool autoDelete = false)
-        {
-            using (IModel channel = Connection.CreateModel())
-            {
-                string queue_name = channel.QueueDeclare(consumerName, durable, exclusive, autoDelete, null);
-                channel.QueueBind(queue_name, eventName, routekey);
-            }
-        }
-        /// <summary>
-        /// 取消订阅
-        /// </summary>
-        /// <param name="eventName">事件名称</param>
-        /// <param name="consumerName">消费者名称</param>
-        ///  /// <param name="routekey">路由</param>
-        public static void UnSubscription(string eventName, string consumerName, string routekey = "")
-        {
-            using (IModel channel = Connection.CreateModel())
-            {
-                channel.QueueUnbind(consumerName, eventName, routekey,null);
-            }
-        }
+
         /// <summary>
         /// 任务
         /// </summary>

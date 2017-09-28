@@ -13,6 +13,11 @@ namespace EventBus2RMQ
     public class Producter : BaseConfig
     {
         #region Fields
+        /// <summary>
+        /// 错误
+        /// </summary>
+        /// <param name="jsondata"></param>
+        /// <param name="message"></param>
         public delegate void ErrorHandler(string jsondata, string message);
         static JsonSerializerSettings jsonset = new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore };
         #endregion

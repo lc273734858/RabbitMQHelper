@@ -19,17 +19,7 @@
             MQ连接
             </summary>
         </member>
-        <member name="T:EventBus2RMQ.ConsumerClient">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:EventBus2RMQ.ConsumerClient.Start">
-            <summary>
-            注册并开始消费
-            </summary>
-        </member>
-        <member name="M:EventBus2RMQ.ConsumerClient.Subscription(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:EventBus2RMQ.BaseConfig.Subscription(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             订阅事件
             </summary>
@@ -40,13 +30,41 @@
             <param name="exclusive"></param>
             <param name="autoDelete">自动删除</param>
         </member>
-        <member name="M:EventBus2RMQ.ConsumerClient.UnSubscription(System.String,System.String,System.String)">
+        <member name="M:EventBus2RMQ.BaseConfig.UnSubscription(System.String,System.String,System.String)">
             <summary>
             取消订阅
             </summary>
             <param name="eventName">事件名称</param>
             <param name="consumerName">消费者名称</param>
              /// <param name="routekey">路由</param>
+        </member>
+        <member name="M:EventBus2RMQ.BaseConfig.QueueDeclare(System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            定义队列
+            </summary>
+            <param name="queueName">队列名称</param>
+            <param name="durable">持久</param>
+            <param name="exclusive"></param>
+            <param name="autoDelete">自动删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.BaseConfig.PushDataToQueue(System.String,System.String,System.Boolean)">
+            <summary>
+            推送消息到队列
+            </summary>
+            <param name="queueName">队列名称</param>
+            <param name="data">数据</param>
+            <param name="persistent">是否持久</param>
+        </member>
+        <member name="T:EventBus2RMQ.ConsumerClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.ConsumerClient.Start">
+            <summary>
+            注册并开始消费
+            </summary>
         </member>
         <member name="F:EventBus2RMQ.ConsumerClient.tasks">
             <summary>
@@ -222,6 +240,13 @@
             <summary>
             生产者
             </summary>
+        </member>
+        <member name="T:EventBus2RMQ.Producter.ErrorHandler">
+            <summary>
+            错误
+            </summary>
+            <param name="jsondata"></param>
+            <param name="message"></param>
         </member>
         <member name="M:EventBus2RMQ.Producter.RegisteEvent">
             <summary>

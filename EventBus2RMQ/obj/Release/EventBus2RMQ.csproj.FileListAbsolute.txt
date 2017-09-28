@@ -8,3 +8,13 @@ F:\workfolder\projects\RabbitMQHelper\EventBus2RMQ\bin\Release\RabbitMQ.Client.x
 F:\workfolder\projects\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.csproj.CoreCompileInputs.cache
 F:\workfolder\projects\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.dll
 F:\workfolder\projects\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.pdb
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\EventBus2RMQ.dll.config
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\EventBus2RMQ.xml
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\EventBus2RMQ.dll
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\EventBus2RMQ.pdb
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\Newtonsoft.Json.dll
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\RabbitMQ.Client.dll
+F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\RabbitMQ.Client.xml
+F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.csproj.CoreCompileInputs.cache
+F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.dll
+F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.pdb
