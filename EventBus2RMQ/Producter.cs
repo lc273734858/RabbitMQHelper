@@ -33,7 +33,7 @@ namespace EventBus2RMQ
             {
                 foreach (var item in config.Events)
                 {
-                    channel.ExchangeDeclare(item.EventName, item.ExchangeType);
+                    channel.ExchangeDeclare(item.EventName, item.ExchangeType,true);
                 }
             }
         }

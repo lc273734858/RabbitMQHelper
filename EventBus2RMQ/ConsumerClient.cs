@@ -103,6 +103,8 @@ namespace EventBus2RMQ
                 }
             }
         }
+
+
         /// <summary>
         /// 停止消费
         /// </summary>
