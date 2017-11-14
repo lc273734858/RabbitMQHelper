@@ -236,6 +236,16 @@
             <param name="data">数据</param>
             <param name="persistent">是否持久</param>
         </member>
+        <member name="M:EventBus2RMQ.MQInstance.PushDataListToQueue``1(System.String,System.Collections.Generic.ICollection{``0},System.Action{``0},System.Boolean)">
+            <summary>
+            批量推送数据到队列
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queueName">队列名称</param>
+            <param name="datas">数据</param>
+            <param name="errorCallBack">错误回调</param>
+            <param name="persistent">是否持久化</param>
+        </member>
         <member name="M:EventBus2RMQ.MQInstance.ConsumeQueueAck(System.String,System.Action{System.Byte[]},System.Action{System.Exception,System.Byte[]})">
             <summary>
             采用确认机制消费队列

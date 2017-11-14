@@ -19,7 +19,7 @@ namespace EventBus2RMQ
         /// <param name="jsondata"></param>
         /// <param name="message"></param>
         public delegate void ErrorHandler(string jsondata, string message);
-        static JsonSerializerSettings jsonset = new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore };
+        public static JsonSerializerSettings jsonset = new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore };
         #endregion
 
         #region Constructor

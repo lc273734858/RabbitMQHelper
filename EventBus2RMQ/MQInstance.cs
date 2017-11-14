@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using Newtonsoft.Json;
+using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
 using System.Collections.Generic;
@@ -71,6 +72,41 @@ namespace EventBus2RMQ
                 prop.Persistent = persistent;
 
                 channel.BasicPublish("", queueName, prop, Encoding.UTF8.GetBytes(data));
+            }
+        }
+        /// <summary>
+        /// 批量推送数据到队列
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="queueName">队列名称</param>
+        /// <param name="datas">数据</param>
+        /// <param name="errorCallBack">错误回调</param>
+        /// <param name="persistent">是否持久化</param>
+        public static void PushDataListToQueue<T>(string queueName, ICollection<T> datas, Action<T> errorCallBack, bool persistent = true)
+        {
+            using (IModel channel = BaseConfig.Connection.CreateModel())
+            {
+                channel.ConfirmSelect();
+                try
+                {
+                    foreach (var data in datas)
+                    {
+                        var bodystring = JsonConvert.SerializeObject(data, Producter.jsonset);
+                        var body = Encoding.UTF8.GetBytes(bodystring);
+                        var prop = channel.CreateBasicProperties();
+                        prop.Persistent = persistent;
+                        channel.BasicPublish("", "queueName", prop, body);
+
+                        if (!channel.WaitForConfirms())
+                        {
+                            errorCallBack(data);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
         /// <summary>
