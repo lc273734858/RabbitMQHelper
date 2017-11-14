@@ -74,6 +74,7 @@ namespace EventBus2RMQ
                 BasicDeliverEventArgs ea = null;
                 try
                 {
+                    message = string.Empty;
                     ea = consumer.Queue.Dequeue();
                     message = Encoding.UTF8.GetString(ea.Body);
                     process.ProcessData(message);

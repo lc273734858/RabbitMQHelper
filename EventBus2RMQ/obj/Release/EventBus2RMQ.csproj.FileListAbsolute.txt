@@ -18,3 +18,4 @@ F:\netcore\RabbitMQHelper\EventBus2RMQ\bin\Release\RabbitMQ.Client.xml
 F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.csproj.CoreCompileInputs.cache
 F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.dll
 F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.pdb
+F:\netcore\RabbitMQHelper\EventBus2RMQ\obj\Release\EventBus2RMQ.csprojResolveAssemblyReference.cache

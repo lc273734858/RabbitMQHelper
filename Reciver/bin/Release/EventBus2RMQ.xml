@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventBus2RMQ</name>
+    </assembly>
+    <members>
+        <member name="T:EventBus2RMQ.BaseConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EventBus2RMQ.BaseConfig.config">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="F:EventBus2RMQ.BaseConfig.Connection">
+            <summary>
+            MQ连接
+            </summary>
+        </member>
+        <member name="T:EventBus2RMQ.ConsumerClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.ConsumerClient.Start">
+            <summary>
+            注册并开始消费
+            </summary>
+        </member>
+        <member name="F:EventBus2RMQ.ConsumerClient.tasks">
+            <summary>
+            任务
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.ConsumerClient.Stop">
+            <summary>
+            停止消费
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.RabbitMQAdress">
+            <summary>
+            MQ地址
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.AutomaticRecoveryEnabled">
+            <summary>
+            允许自动重连
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.VirtualHost">
+            <summary>
+            虚拟路径
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.Events">
+            <summary>
+            服务端事件
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.Consumers">
+            <summary>
+            消费者
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.EventBus2RMQConfig.ReadFromConfig(System.String)">
+            <summary>
+            读取配置文件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.EventBus2RMQConfig.ReadFromDefaultConfig">
+            <summary>
+            读取默认路径配置文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.EventBus2RMQConfig.GetDefaultConfigPath">
+            <summary>
+            获取默认配置文件路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.EventBus2RMQConfig.GetLogFilePath">
+            <summary>
+            获取日志路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.EventBus2RMQConfig.GetDefaultLogPath">
+            <summary>
+            获取日志文件路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.EventBus2RMQConfig.GetApplicationPath">
+            <summary>
+            获取应用基础路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EventBus2RMQ.Event.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Event.ExchangeType">
+            <summary>
+            订阅方式
+            </summary>
+        </member>
+        <member name="T:EventBus2RMQ.Consumer">
+            <summary>
+            消费者
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Consumer.EventName">
+            <summary>
+            接收的事件
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Consumer.ConsumerName">
+            <summary>
+            消费者名称
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Consumer.EventProcesser">
+            <summary>
+            处理线程
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Consumer.Durable">
+            <summary>
+            在服务器重启时，能够存活
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Consumer.Exclusive">
+            <summary>
+            是否为当前连接的专用队列，在连接断开后，会自动删除该队列
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.Consumer.AutoDelete">
+            <summary>
+            当没有任何消费者使用时，自动删除该队列
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.Helper.OpenConnection(EventBus2RMQ.EventBus2RMQConfig)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="psw"></param>
+            <param name="adress"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EventBus2RMQ.IResumer">
+            <summary>
+            消费者
+            </summary>
+        </member>
+        <member name="P:EventBus2RMQ.IResumer.IsDiscardErrorData">
+            <summary>
+            错误的数据是否丢弃
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.IResumer.ProcessData(System.String)">
+            <summary>
+            接收消息
+            </summary>
+            <param name="jsondata"></param>
+        </member>
+        <member name="M:EventBus2RMQ.IResumer.ErrorHandler(System.Exception,System.String)">
+            <summary>
+            错误处理
+            </summary>
+            <param name="ex"></param>
+            <param name="jsondata">正在处理的数据，有可能为空</param>
+        </member>
+        <member name="T:EventBus2RMQ.MQInstance">
+            <summary>
+            队列方法
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.Subscription(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            订阅事件
+            </summary>
+            <param name="eventName">事件名称</param>
+            <param name="consumerName">消费者名称</param>
+            <param name="routekey">路由</param>
+            <param name="durable">持久</param>
+            <param name="exclusive"></param>
+            <param name="autoDelete">自动删除</param>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.UnSubscription(System.String,System.String,System.String)">
+            <summary>
+            取消订阅
+            </summary>
+            <param name="eventName">事件名称</param>
+            <param name="consumerName">消费者名称</param>
+             /// <param name="routekey">路由</param>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.QueueDeclare(System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            定义队列
+            </summary>
+            <param name="queueName">队列名称</param>
+            <param name="durable">持久</param>
+            <param name="exclusive"></param>
+            <param name="autoDelete">自动删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.PushDataToQueue(System.String,System.String,System.Boolean)">
+            <summary>
+            推送消息到队列
+            </summary>
+            <param name="queueName">队列名称</param>
+            <param name="data">数据</param>
+            <param name="persistent">是否持久</param>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.ConsumeQueueAck(System.String,System.Action{System.Byte[]},System.Action{System.Exception,System.Byte[]})">
+            <summary>
+            采用确认机制消费队列
+            </summary>
+            <param name="queueName"></param>
+            <param name="proccesser"></param>
+            <param name="errorHandler"></param>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.ConsumeQueue(System.String,System.Action{System.Byte[]},System.Action{System.Exception,System.Byte[]})">
+            <summary>
+            消费队列
+            </summary>
+            <param name="queueName"></param>
+            <param name="proccesser"></param>
+            <param name="errorHandler"></param>
+        </member>
+        <member name="M:EventBus2RMQ.MQInstance.ExchangeDeclare(System.String,System.String,System.Boolean,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            定义事件
+            </summary>
+            <param name="eventName"></param>
+            <param name="eventType"></param>
+            <param name="durable"></param>
+            <param name="autoDelete"></param>
+            <param name="arguments"></param>
+        </member>
+        <member name="T:EventBus2RMQ.Service">
+            <summary>
+            生产者
+            </summary>
+        </member>
+        <member name="T:EventBus2RMQ.Producter">
+            <summary>
+            生产者
+            </summary>
+        </member>
+        <member name="T:EventBus2RMQ.Producter.ErrorHandler">
+            <summary>
+            错误
+            </summary>
+            <param name="jsondata"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.RegisteEvent">
+            <summary>
+            向MQ注册事件
+            </summary>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushData(System.Object,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="eventName"></param>
+            <param name="Persistent">数据是否持久化，默认持久化</param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushData(System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="jsondata"></param>
+            <param name="eventName"></param>
+            <param name="Persistent"></param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushData(System.Byte[],System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="body"></param>
+            <param name="eventName"></param>
+            <param name="Persistent"></param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataAsync(System.Object,System.String,EventBus2RMQ.Producter.ErrorHandler,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="eventName"></param>
+            <param name="Persistent">数据是否持久化，默认持久化</param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataAsync(System.String,System.String,EventBus2RMQ.Producter.ErrorHandler,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="jsondata"></param>
+            <param name="eventName"></param>
+            <param name="errorCallBack"></param>
+            <param name="Persistent"></param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataAutoRetry(System.Object,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            如果失败之后自动缓存，重试设置的次数后，写入本地日志
+            </summary>
+            <param name="data"></param>
+            <param name="eventName">事件名称</param>
+            <param name="times">重试次数</param>
+            <param name="interval">重试时间间隔/毫秒</param>
+            <param name="Persistent">数据是否持久化，默认持久化</param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataAutoRetry(System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            如果失败之后自动缓存，重试设置的次数后，写入本地日志
+            </summary>
+            <param name="jsondata"></param>
+            <param name="eventName">事件名称</param>
+            <param name="times">重试次数</param>
+            <param name="interval">重试时间间隔/毫秒</param>
+            <param name="Persistent">数据是否持久化，默认持久化</param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataAutoRetry(System.Byte[],System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            如果失败之后自动缓存，重试设置的次数后，写入本地日志
+            </summary>
+            <param name="body"></param>
+            <param name="eventName">事件名称</param>
+            <param name="times">重试次数</param>
+            <param name="interval">重试时间间隔/毫秒</param>
+            <param name="Persistent">数据是否持久化，默认持久化</param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDatas``1(System.Collections.Generic.ICollection{``0},System.String,System.Nullable{System.Boolean},System.Action{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="datas"></param>
+            <param name="eventName"></param>
+            <param name="Persistent"></param>
+            <param name="ErrorCallBack"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\config\eventbus2rmq.json
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\ConsoleApp1.exe.config
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\ConsoleApp1.exe
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\ConsoleApp1.pdb
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\EventBus2RMQ.dll
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\Newtonsoft.Json.dll
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\RabbitMQ.Client.dll
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\EventBus2RMQ.pdb
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\EventBus2RMQ.xml
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\EventBus2RMQ.dll.config
+F:\netcore\RabbitMQHelper\ConsoleApp1\bin\Release\RabbitMQ.Client.xml
+F:\netcore\RabbitMQHelper\ConsoleApp1\obj\Release\ConsoleApp1.csprojResolveAssemblyReference.cache
+F:\netcore\RabbitMQHelper\ConsoleApp1\obj\Release\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\netcore\RabbitMQHelper\ConsoleApp1\obj\Release\ConsoleApp1.exe
+F:\netcore\RabbitMQHelper\ConsoleApp1\obj\Release\ConsoleApp1.pdb
