@@ -95,7 +95,7 @@ namespace EventBus2RMQ
                         var body = Encoding.UTF8.GetBytes(bodystring);
                         var prop = channel.CreateBasicProperties();
                         prop.Persistent = persistent;
-                        channel.BasicPublish("", "queueName", prop, body);
+                        channel.BasicPublish("", queueName, prop, body);
 
                         if (!channel.WaitForConfirms())
                         {
