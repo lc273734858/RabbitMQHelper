@@ -28,7 +28,7 @@ namespace EventBus2RMQ
         /// <summary>
         /// 是否持久
         /// </summary>
-        public bool? Persistent;
+        public bool Persistent;
 
         /// <summary>
         /// 

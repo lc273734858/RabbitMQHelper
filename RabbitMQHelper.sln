@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reciver", "Reciver\Reciver.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReciverTestProcesser", "ReciverTestProcesser\ReciverTestProcesser.csproj", "{77910420-E898-4C53-8D6D-0035649CA9EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus2RMQ.NetCore", "EventBus2RMQ.NetCore\EventBus2RMQ.NetCore.csproj", "{807DA2B5-BA32-4555-AE37-C2C27C40B973}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{77910420-E898-4C53-8D6D-0035649CA9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77910420-E898-4C53-8D6D-0035649CA9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77910420-E898-4C53-8D6D-0035649CA9EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807DA2B5-BA32-4555-AE37-C2C27C40B973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807DA2B5-BA32-4555-AE37-C2C27C40B973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807DA2B5-BA32-4555-AE37-C2C27C40B973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807DA2B5-BA32-4555-AE37-C2C27C40B973}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

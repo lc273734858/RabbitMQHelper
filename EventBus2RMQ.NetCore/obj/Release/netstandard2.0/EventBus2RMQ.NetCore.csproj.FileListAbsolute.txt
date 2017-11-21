@@ -1,0 +1,9 @@
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\bin\Release\netstandard2.0\EventBus2RMQ.NetCore.deps.json
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\bin\Release\netstandard2.0\EventBus2RMQ.NetCore.dll
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\obj\Release\netstandard2.0\EventBus2RMQ.NetCore.csproj.CoreCompileInputs.cache
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\obj\Release\netstandard2.0\EventBus2RMQ.NetCore.AssemblyInfoInputs.cache
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\obj\Release\netstandard2.0\EventBus2RMQ.NetCore.AssemblyInfo.cs
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\bin\Release\netstandard2.0\EventBus2RMQ.NetCore.pdb
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\obj\Release\netstandard2.0\EventBus2RMQ.NetCore.dll
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\obj\Release\netstandard2.0\EventBus2RMQ.NetCore.pdb
+F:\netcore\RabbitMQHelper\EventBus2RMQ.NetCore\bin\Release\netstandard2.0\EventBus2RMQ.NetCore.xml
