@@ -41,6 +41,10 @@ namespace EventBus2RMQ
         /// </summary>
         public Consumer[] Consumers { get; set; }
         /// <summary>
+        /// 预先读取的记录数
+        /// </summary>
+        public int prefetchCount { get; set; }
+        /// <summary>
         /// 读取配置文件
         /// </summary>
         /// <param name="path"></param>

@@ -1,7 +1,8 @@
 ﻿{
-  "RabbitMQAdress": "192.168.130.64", 
-  "UserName": "Admin", 
+  "RabbitMQAdress": "192.168.130.64",
+  "UserName": "Admin",
   "PassWord": "123456",
+  "prefetchCount": 0,
   "Events": [
     {
       "EventName": "TestIndex",
@@ -12,7 +13,7 @@
     {
       "EventName": "事件名称",
       "ConsumerName": "事件队列名称，命名请使用EventName.QueueName的格式",
-      "EventProcesser": "处理接收消息的类，需要继承EventBus2RMQ.IResumer"//格式NameSpace.ClassName,DLLName
+      "EventProcesser": "处理接收消息的类，需要继承EventBus2RMQ.IResumer" //格式NameSpace.ClassName,DLLName
     }
   ]
 }

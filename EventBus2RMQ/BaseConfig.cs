@@ -22,6 +22,10 @@ namespace EventBus2RMQ
         static public IConnection Connection;
         static BaseConfig() {
             config = EventBus2RMQConfig.ReadFromDefaultConfig();
+            if (config.prefetchCount == 0)
+            {
+                config.prefetchCount = 1;
+            }
             Connection = Helper.OpenConnection(config);
         }
     }
