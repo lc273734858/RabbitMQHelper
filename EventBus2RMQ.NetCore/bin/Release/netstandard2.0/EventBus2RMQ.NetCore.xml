@@ -79,6 +79,11 @@
             消费者
             </summary>
         </member>
+        <member name="P:EventBus2RMQ.EventBus2RMQConfig.prefetchCount">
+            <summary>
+            预先读取的记录数
+            </summary>
+        </member>
         <member name="M:EventBus2RMQ.EventBus2RMQConfig.ReadFromConfig(System.String)">
             <summary>
             读取配置文件

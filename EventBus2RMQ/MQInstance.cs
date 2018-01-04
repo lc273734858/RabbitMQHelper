@@ -120,6 +120,7 @@ namespace EventBus2RMQ
             IModel channel = null;
             QueueingBasicConsumer consumer = null;
             channel = BaseConfig.Connection.CreateModel();
+            channel.BasicQos(0, 5, false);
             consumer = new QueueingBasicConsumer(channel);
             channel.BasicConsume(queueName, false, consumer);
             BasicDeliverEventArgs ea = null;
