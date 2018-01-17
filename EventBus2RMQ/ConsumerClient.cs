@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EventBus2RMQ
@@ -32,7 +33,7 @@ namespace EventBus2RMQ
                 BeginConsumer(item);
             }
         }
-
+        private static CancellationTokenSource cts =new CancellationTokenSource();
         /// <summary>
         /// 任务
         /// </summary>
@@ -72,6 +73,10 @@ namespace EventBus2RMQ
             string message = string.Empty;
             while (true)
             {
+                if (cts.IsCancellationRequested)
+                {
+                    break;
+                }
                 BasicDeliverEventArgs ea = null;
                 try
                 {
@@ -98,9 +103,9 @@ namespace EventBus2RMQ
                         }
                         process.ErrorHandler(ex, message);
                     }
-                    catch (Exception)
+                    catch (Exception ex2)
                     {
-
+                        Console.WriteLine(ex2.ToString());
                     }
                 }
             }
@@ -112,10 +117,7 @@ namespace EventBus2RMQ
         /// </summary>
         public static void Stop()
         {
-            foreach (var task in tasks)
-            {
-                task.Dispose();
-            }
+            cts.Cancel();
         }
     }
 }
