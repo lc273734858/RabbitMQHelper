@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EventBus2RMQ.dll</id>
+    <version>#{version}#</version>
+    <authors>刘吉国</authors>
+    <owners>liujg</owners>
+    <!-- <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl> -->
+    <projectUrl>http%3a%2f%2fdocs.5173.com%2findex.php%3fs%3d%2f52%26page_id%3d286</projectUrl>
+    <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>RabbitMQ帮助类</description>
+    <releaseNotes>
+        1.增加消费队列方法
+        2.增加定义事件方法
+        3.默认创建持久事件
+        4.修复如果DQ失败会不停推送数据的Bug
+        5.增加批量推送消息到队列
+        6.增加对未消费数据的控制
+    </releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>RabbitMQ MQHelp Help</tags>
+<!--     <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies> -->
+  </metadata>
+</package>
