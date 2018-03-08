@@ -299,8 +299,17 @@
             
             </summary>
             <param name="data"></param>
-            <param name="eventName"></param>
+            <param name="eventName">事件名称</param>
             <param name="Persistent">数据是否持久化，默认持久化</param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataByRoutingKey(System.Object,System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="data">数据</param>
+            <param name="eventName">事件名称</param>
+            <param name="routing">路由</param>
+            <param name="Persistent">是否持久化</param>
         </member>
         <member name="M:EventBus2RMQ.Producter.PushData(System.String,System.String,System.Boolean)">
             <summary>
@@ -310,12 +319,30 @@
             <param name="eventName"></param>
             <param name="Persistent"></param>
         </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataByRoutingKey(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="jsondata"></param>
+            <param name="eventName">事件名称</param>
+            <param name="routing">路由</param>
+            <param name="Persistent"></param>
+        </member>
         <member name="M:EventBus2RMQ.Producter.PushData(System.Byte[],System.String,System.Boolean)">
             <summary>
             
             </summary>
             <param name="body"></param>
             <param name="eventName"></param>
+            <param name="Persistent"></param>
+        </member>
+        <member name="M:EventBus2RMQ.Producter.PushDataByRoutingKey(System.Byte[],System.String,System.String,System.Boolean)">
+            <summary>
+            根据路由发送事件
+            </summary>
+            <param name="body"></param>
+            <param name="eventName"></param>
+            <param name="routing"></param>
             <param name="Persistent"></param>
         </member>
         <member name="M:EventBus2RMQ.Producter.PushDataAsync(System.Object,System.String,EventBus2RMQ.Producter.ErrorHandler,System.Boolean)">
@@ -351,21 +378,23 @@
             </summary>
             <param name="jsondata"></param>
             <param name="eventName">事件名称</param>
+            <param name="routing"></param>
             <param name="times">重试次数</param>
             <param name="interval">重试时间间隔/毫秒</param>
             <param name="Persistent">数据是否持久化，默认持久化</param>
         </member>
-        <member name="M:EventBus2RMQ.Producter.PushDataAutoRetry(System.Byte[],System.String,System.Int32,System.Int32,System.Boolean)">
+        <member name="M:EventBus2RMQ.Producter.PushDataAutoRetry(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.Boolean)">
             <summary>
             如果失败之后自动缓存，重试设置的次数后，写入本地日志
             </summary>
             <param name="body"></param>
             <param name="eventName">事件名称</param>
+            <param name="routing"></param>
             <param name="times">重试次数</param>
             <param name="interval">重试时间间隔/毫秒</param>
             <param name="Persistent">数据是否持久化，默认持久化</param>
         </member>
-        <member name="M:EventBus2RMQ.Producter.PushDatas``1(System.Collections.Generic.ICollection{``0},System.String,System.Nullable{System.Boolean},System.Action{``0})">
+        <member name="M:EventBus2RMQ.Producter.PushDatas``1(System.Collections.Generic.ICollection{``0},System.String,System.String,System.Nullable{System.Boolean},System.Action{``0})">
             <summary>
             
             </summary>
