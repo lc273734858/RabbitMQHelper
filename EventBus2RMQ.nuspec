@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>EventBus2RMQ</id>
-        <version>#{version}#</version>
+        <version>#{rabbitmqhelpversion}#</version>
         <title>EventBus2RMQ</title>
         <authors>liujg</authors>
         <owners>liujg</owners>
