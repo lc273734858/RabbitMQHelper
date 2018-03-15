@@ -7,15 +7,9 @@
         <authors>liujg</authors>
         <owners>liujg</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>使用RabbitMQ来替代原有的EventBus，如有疑问请咨询架构部刘吉国</description>
-        <summary>1.增加消费队列方法
-2.增加定义事件方法
-3.默认创建持久事件
-4.修复如果DQ失败会不停推送数据的Bug
-5.增加批量推送消息到队列
-6.增加对未消费数据的控制</summary>
-        <releaseNotes>1.增加推送routting参数
-2.将netcore和framework放在同一个nuget包里面</releaseNotes>
+        <description>#{description}#</description>
+        <summary>#{summary}#</summary>
+        <releaseNotes>#{releaseNotes}#</releaseNotes>
         <dependencies>
             <group targetFramework=".NETFramework4.0">
                 <dependency id="RabbitMQ.Client" version="3.5.7" />
