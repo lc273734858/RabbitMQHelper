@@ -68,7 +68,7 @@ namespace EventBus2RMQ
         /// <returns></returns>
         public static string GetDefaultConfigPath()
         {
-            return Path.Combine(GetApplicationPath(), "config\\eventbus2rmq.json");
+            return Path.Combine(GetApplicationPath(), "config/eventbus2rmq.json");
         }
         /// <summary>
         /// 获取日志路径
@@ -76,7 +76,7 @@ namespace EventBus2RMQ
         /// <returns></returns>
         public static string GetLogFilePath()
         {
-            var path= Path.Combine(GetApplicationPath(), "log\\eventbus2rmq.log");
+            var path= Path.Combine(GetApplicationPath(), "log/eventbus2rmq.log");
             return path;
         }
         /// <summary>
