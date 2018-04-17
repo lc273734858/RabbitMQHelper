@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>EventBus2RMQ</id>
+        <version>2.0.1.8</version>
+        <title>EventBus2RMQ</title>
+        <authors>liujg</authors>
+        <owners>liujg</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>#{description}#</description>
+        <summary>#{summary}#</summary>
+        <releaseNotes>#{releaseNotes}#</releaseNotes>
+        <dependencies>
+            <group targetFramework=".NETFramework4.0">
+                <dependency id="RabbitMQ.Client" version="3.5.7" />
+                <dependency id="NewtonsoftJson_5173" version="1.0.0.1" />
+            </group>
+            <group targetFramework=".NETCore2.0">
+                <dependency id="Newtonsoft.Json" version="10.0.3" />
+                <dependency id="RabbitMQ.Client" version="5.0.1" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="config\eventbus2rmq.json" target="content\config\eventbus2rmq.json" />
+        <file src="EventBus2RMQ.dll" target="lib\net40\EventBus2RMQ.dll" />
+        <file src="EventBus2RMQ.xml" target="lib\net40\EventBus2RMQ.xml" />
+        <file src="EventBus2RMQ.NetCore.dll" target="lib\netstandard2.0\EventBus2RMQ.NetCore.dll" />
+        <file src="EventBus2RMQ.NetCore.xml" target="lib\netstandard2.0\EventBus2RMQ.NetCore.xml" />
+    </files>
+</package>
