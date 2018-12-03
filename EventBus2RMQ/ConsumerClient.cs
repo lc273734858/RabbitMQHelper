@@ -18,7 +18,7 @@ namespace EventBus2RMQ
         /// <summary>
         /// 注册并开始消费
         /// </summary>
-        public static void Start()
+        public static void RegistComsumer()
         {
             using (IModel channel = Connection.CreateModel())
             {
@@ -28,6 +28,13 @@ namespace EventBus2RMQ
                     channel.QueueBind(queue_name, item.EventName, "");
                 }
             }
+        }
+        /// <summary>
+        /// 注册并启动消费
+        /// </summary>
+        public static void RegistAndStartComsumer()
+        {
+            RegistComsumer();
             foreach (var item in config.Consumers)
             {
                 BeginConsumer(item);

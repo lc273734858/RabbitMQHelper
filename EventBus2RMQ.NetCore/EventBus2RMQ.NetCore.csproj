@@ -1,13 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.2</Version>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard2.0\EventBus2RMQ.NetCore.xml</DocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="..\EventBus2RMQ\BaseConfig.cs" Link="BaseConfig.cs" />
     <Compile Include="..\EventBus2RMQ\ConsumerClient.cs" Link="ConsumerClient.cs" />
@@ -19,10 +22,8 @@
     <Compile Include="..\EventBus2RMQ\RetryCache.cs" Link="RetryCache.cs" />
     <Compile Include="..\EventBus2RMQ\Service.cs" Link="Service.cs" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="RabbitMQ.Client" Version="5.0.1" />
   </ItemGroup>
-
 </Project>

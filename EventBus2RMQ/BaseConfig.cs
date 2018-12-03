@@ -28,5 +28,12 @@ namespace EventBus2RMQ
             }
             Connection = Helper.OpenConnection(config);
         }
+        public static void StartService()
+        {
+            using (IModel channel = Connection.CreateModel())
+            {
+
+            }
+        }
     }
 }
