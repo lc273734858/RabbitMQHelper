@@ -24,8 +24,15 @@ namespace EventBus2RMQ
             {
                 foreach (var item in config.Consumers)
                 {
-                    string queue_name = channel.QueueDeclare(item.ConsumerName, item.Durable.GetValueOrDefault(true), item.Exclusive.GetValueOrDefault(false), item.AutoDelete.GetValueOrDefault(false), null);
-                    channel.QueueBind(queue_name, item.EventName, "");
+                    try
+                    {
+                        string queue_name = channel.QueueDeclare(item.ConsumerName, item.Durable.GetValueOrDefault(true), item.Exclusive.GetValueOrDefault(false), item.AutoDelete.GetValueOrDefault(false), null);
+                        channel.QueueBind(queue_name, item.EventName, "");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
         }
@@ -50,6 +57,24 @@ namespace EventBus2RMQ
             tasks.Add(Task.Factory.StartNew(Consume, consumer, TaskCreationOptions.None));
             Console.WriteLine("开始监听"+ consumer.EventName);
         }
+        private static (QueueingBasicConsumer, IModel) CreateConsumer(Consumer config, IResumer process) {
+            IModel channel = null;
+            QueueingBasicConsumer consumer = null;
+            try
+            {
+                channel = Connection.CreateModel();
+                channel.BasicQos(0, 5, false);
+                consumer = new QueueingBasicConsumer(channel);
+                channel.BasicConsume(config.ConsumerName, false, consumer);
+                return (consumer, channel);
+            }
+            catch (Exception ex)
+            {
+                process.ErrorHandler(ex, "");
+            }
+            return (null, null);
+
+        }
         private static void Consume(object state)
         {
             var config = (Consumer)state;
@@ -64,19 +89,8 @@ namespace EventBus2RMQ
             }
             IModel channel = null;
             QueueingBasicConsumer consumer = null;
-            try
-            {
+            (consumer,channel)= CreateConsumer(config, process);
 
-                channel = Connection.CreateModel();
-                channel.BasicQos(0, 5, false);
-                consumer = new QueueingBasicConsumer(channel);
-                channel.BasicConsume(config.ConsumerName, false, consumer);
-            }
-            catch (Exception ex)
-            {
-                process.ErrorHandler(ex, "");
-                return;
-            }
             string message = string.Empty;
             while (true)
             {
@@ -109,11 +123,20 @@ namespace EventBus2RMQ
                             }
                         }
                         process.ErrorHandler(ex, message);
+                        (consumer, channel) = CreateConsumer(config, process);
+                    }
+                    catch (NullReferenceException) {
+                        (consumer, channel) = CreateConsumer(config, process);
+                    }
+                    catch (RabbitMQ.Client.Exceptions.ConnectFailureException)
+                    {
+                        (consumer, channel) = CreateConsumer(config, process);
                     }
                     catch (Exception ex2)
                     {
                         Console.WriteLine(ex2.ToString());
                     }
+                    Thread.Sleep(500);
                 }
             }
         }

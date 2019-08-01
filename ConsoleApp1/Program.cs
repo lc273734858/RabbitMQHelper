@@ -16,7 +16,8 @@ namespace ConsoleApp1
             try
             {
                 //TestFast();
-                TestAsync();
+                //TestAsync();
+                Test();
             }
             catch (Exception ex)
             {
@@ -40,15 +41,22 @@ namespace ConsoleApp1
                 EventBus2RMQ.Producter.RegisteEvent();
                 int indxe = 0;
                 while (true)
-                {                    
-                    Thread.Sleep(500);
-                    indxe++;
-                    EventBus2RMQ.Producter.PushData(new {index= indxe, name = "1111", date = DateTime.Now }, config.Events[0].EventName,false);
-                    //EventBus2RMQ.Service.PushDatas(new string[] { "1", "2", "3" }, "", true, (obj) =>
-                    //{
-                    //    Console.WriteLine("{0} 推送失败", obj);
-                    //});
-                    Console.WriteLine("{0} : push data success", DateTime.Now);
+                {
+                    try
+                    {
+                        Thread.Sleep(10);
+                        indxe++;
+                        EventBus2RMQ.Producter.PushData(new { index = indxe, name = "1111", date = DateTime.Now }, config.Events[0].EventName, true);
+                        //EventBus2RMQ.Service.PushDatas(new string[] { "1", "2", "3" }, "", true, (obj) =>
+                        //{
+                        //    Console.WriteLine("{0} 推送失败", obj);
+                        //});
+                        Console.WriteLine("{0} : push data success", DateTime.Now);
+                    }
+                    catch (Exception ex1)
+                    {
+                        Console.WriteLine(ex1.Message);
+                    }
                 }
             }
             catch (Exception ex)

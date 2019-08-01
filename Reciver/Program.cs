@@ -11,7 +11,7 @@ namespace Reciver
         {
             try
             {
-                 EventBus2RMQ.ConsumerClient.Start();
+                 EventBus2RMQ.ConsumerClient.RegistAndStartComsumer();
             }
             catch (Exception ex)
             {
@@ -27,12 +27,12 @@ namespace Reciver
 
         public void ErrorHandler(Exception ex, string jsaondata)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(ex.Message);
         }
 
         public void ProcessData(string jsondata)
         {
-            System.Threading.Thread.Sleep(200);
+            System.Threading.Thread.Sleep(1000);
             Console.WriteLine(DateTime.Now);
             Console.WriteLine(jsondata);
         }

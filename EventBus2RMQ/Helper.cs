@@ -32,7 +32,7 @@ namespace EventBus2RMQ
             }
             factory.AutomaticRecoveryEnabled = config.AutomaticRecoveryEnabled.GetValueOrDefault(true);
             factory.RequestedConnectionTimeout = 15000;
-            return factory.CreateConnection();   //创建连接效率很低，所以一直保持一个连接  
+            return factory.CreateConnection();   //创建连接效率很低，所以一直保持一个连接
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿{
-  "RabbitMQAdress": "192.168.130.64", 
-  "UserName": "Admin", 
+  "RabbitMQAdress": "192.168.12.95", 
+  "UserName": "admin", 
   "PassWord": "123456",
   "Events": [
     {
@@ -10,8 +10,8 @@
   ],
   "Consumers": [
     {
-      "EventName": "CustomerServiceCenter.ChatRecord.AddChatRecord",
-      "ConsumerName": "CustomerServiceCenter.ChatRecord.AddChatRecord.QueueChatCache",
+      "EventName": "TestIndex",
+      "ConsumerName": "TestIndex",
       "EventProcesser": "ReciverTestProcesser.Processer,ReciverTestProcesser"
     }
   ]
