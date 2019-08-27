@@ -103,19 +103,26 @@ namespace EventBus2RMQ
         /// <param name="Persistent"></param>
         static public void PushDataByRoutingKey(byte[] body, string eventName,string routing, bool Persistent = true)
         {
-            using (IModel channel = Connection.CreateModel())
+            try
             {
-                channel.ConfirmSelect();
-
-                var prop = channel.CreateBasicProperties();
-                prop.Persistent = Persistent;
-
-                channel.BasicPublish(eventName, routing, prop, body);
-
-                if (!channel.WaitForConfirms())
+                using (IModel channel = Connection.CreateModel())
                 {
-                    throw new Exception("消息发送失败");
+                    channel.ConfirmSelect();
+
+                    var prop = channel.CreateBasicProperties();
+                    prop.Persistent = Persistent;
+
+                    channel.BasicPublish(eventName, routing, prop, body);
+
+                    if (!channel.WaitForConfirms())
+                    {
+                        throw new Exception("消息发送失败");
+                    }
                 }
+            }
+            catch (RabbitMQ.Client.Exceptions.BrokerUnreachableException)
+            {
+                CreateConnection();
             }
         }
         #endregion
@@ -165,6 +172,10 @@ namespace EventBus2RMQ
                     PushDataByRoutingKey(body1, eventname1, routing, Persistent1);
                     Console.WriteLine("成功");
                     throw new Exception("推送失败");
+                }
+                catch (RabbitMQ.Client.Exceptions.BrokerUnreachableException)
+                {
+                    CreateConnection();
                 }
                 catch (Exception ex)
                 {
@@ -241,6 +252,10 @@ namespace EventBus2RMQ
                         break;
                     }
                 }
+                catch (RabbitMQ.Client.Exceptions.BrokerUnreachableException)
+                {
+                    CreateConnection();
+                }
                 catch (Exception ex)
                 {
                     if (i == times)
@@ -282,6 +297,10 @@ namespace EventBus2RMQ
                             ErrorCallBack(data);
                         }
                     }
+                }
+                catch (RabbitMQ.Client.Exceptions.BrokerUnreachableException)
+                {
+                    CreateConnection();
                 }
                 catch (Exception)
                 {
