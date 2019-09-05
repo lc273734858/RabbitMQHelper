@@ -123,13 +123,12 @@ namespace EventBus2RMQ
                             }
                         }
                         process.ErrorHandler(ex, message);
-                        (consumer, channel) = CreateConsumer(config, process);
-                    }
-                    catch (NullReferenceException) {
-                        (consumer, channel) = CreateConsumer(config, process);
+                        //(consumer, channel) = CreateConsumer(config, process);
                     }
                     catch (RabbitMQ.Client.Exceptions.ConnectFailureException)
                     {
+                        channel.Close();
+                        channel.Dispose();
                         (consumer, channel) = CreateConsumer(config, process);
                     }
                     catch (Exception ex2)

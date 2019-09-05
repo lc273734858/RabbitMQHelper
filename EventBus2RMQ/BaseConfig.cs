@@ -29,6 +29,10 @@ namespace EventBus2RMQ
             Connection = Helper.OpenConnection(config);
         }
         public static void CreateConnection() {
+            if (Connection!=null)
+            {
+                Connection.Dispose();
+            }
             Connection = Helper.OpenConnection(config);
         }
         public static void StartService()
