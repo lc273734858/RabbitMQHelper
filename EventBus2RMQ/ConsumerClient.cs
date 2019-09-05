@@ -107,6 +107,12 @@ namespace EventBus2RMQ
                     process.ProcessData(message);
                     channel.BasicAck(ea.DeliveryTag, false);
                 }
+                catch (RabbitMQ.Client.Exceptions.ConnectFailureException)
+                {
+                    channel.Close();
+                    channel.Dispose();
+                    (consumer, channel) = CreateConsumer(config, process);
+                }
                 catch (Exception ex)
                 {
                     try
