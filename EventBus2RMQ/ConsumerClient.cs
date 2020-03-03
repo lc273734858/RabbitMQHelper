@@ -107,11 +107,12 @@ namespace EventBus2RMQ
                     process.ProcessData(message);
                     channel.BasicAck(ea.DeliveryTag, false);
                 }
-                catch (RabbitMQ.Client.Exceptions.ConnectFailureException)
+                catch (RabbitMQ.Client.Exceptions.ConnectFailureException mqex1)
                 {
-                    channel.Close();
-                    channel.Dispose();
-                    (consumer, channel) = CreateConsumer(config, process);
+                    //channel.Close();
+                    //channel.Dispose();
+                    //(consumer, channel) = CreateConsumer(config, process);
+                    Console.WriteLine(string.Format("mq连不上{0}", mqex1.ToString()));
                 }
                 catch (Exception ex)
                 {
@@ -131,11 +132,12 @@ namespace EventBus2RMQ
                         process.ErrorHandler(ex, message);
                         //(consumer, channel) = CreateConsumer(config, process);
                     }
-                    catch (RabbitMQ.Client.Exceptions.ConnectFailureException)
+                    catch (RabbitMQ.Client.Exceptions.ConnectFailureException mqex)
                     {
-                        channel.Close();
-                        channel.Dispose();
-                        (consumer, channel) = CreateConsumer(config, process);
+                        //channel.Close();
+                        //channel.Dispose();
+                        //(consumer, channel) = CreateConsumer(config, process);
+                        Console.WriteLine(string.Format("mq连不上{0}", mqex.ToString()));
                     }
                     catch (Exception ex2)
                     {
