@@ -30,9 +30,11 @@ namespace EventBus2RMQ
             {
                 factory.Port = config.Port.Value;
             }
-            factory.AutomaticRecoveryEnabled = config.AutomaticRecoveryEnabled.GetValueOrDefault(true);
+            factory.AutomaticRecoveryEnabled = true;
             factory.RequestedConnectionTimeout = 15000;
-            return factory.CreateConnection();   //创建连接效率很低，所以一直保持一个连接
+            var connection= factory.CreateConnection();
+            connection.AutoClose = false;
+            return connection;   //创建连接效率很低，所以一直保持一个连接
         }
     }
 }
